@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: pssAutoDial
+  title: pssAutoDial
+  description: Module to trigger a phone call when certain alarms are raised
+spec:
+  type: service
+  lifecycle: experimental
+  owner: group:default/personnel-safety-systems
