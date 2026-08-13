@@ -13,8 +13,9 @@ The tool makes use of the Twilio API to place the phone call. The message is cus
 
 Athorisation credentials, and phone numbers are stored separately. To run locally, use an .env file with the format of the .env_template file in the repository.
 
-Source          | <https://github.com/DiamondLightSource/pssAutoDial>
+What            | Where
 :---:           | :---:
+Source          | <https://github.com/DiamondLightSource/pssAutoDial>
 PyPI            | `pip install pssAutoDial`
 Docker          | `docker run ghcr.io/diamondlightsource/pssAutoDial:latest`
 Releases        | <https://github.com/DiamondLightSource/pssAutoDial/releases>
