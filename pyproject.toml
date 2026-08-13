@@ -3,7 +3,7 @@ requires = ["setuptools>=64", "setuptools_scm[toml]>=8"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pssAutoDial"
+name = "pss_autodial"
 classifiers = [
     "Development Status :: 3 - Alpha",
     "License :: OSI Approved :: Apache Software License",
@@ -12,7 +12,11 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
 ]
 description = "Module to trigger a phone call when certain alarms are raised"
-dependencies = [] # Add project dependencies here, e.g. ["click", "numpy"]
+dependencies = [
+    "twilio",
+    "aioca",
+    "python-dotenv",
+] # Add project dependencies here, e.g. ["click", "numpy"]
 dynamic = ["version"]
 license.file = "LICENSE"
 readme = "README.md"
@@ -28,10 +32,11 @@ dev = [
     "ruff",
     "tox-uv",
     "types-mock",
+    "urllib3<2.7.1",
 ]
 
 [project.scripts]
-pssAutoDial = "pssAutoDial.__main__:main"
+pss_autodial = "pss_autodial.__main__:main"
 
 [project.urls]
 GitHub = "https://github.com/DiamondLightSource/pssAutoDial"
@@ -41,7 +46,7 @@ email = "tim.burd@diamond.ac.uk"
 name = "Timothy Burd"
 
 [tool.setuptools_scm]
-version_file = "src/pssAutoDial/_version.py"
+version_file = "src/pss_autodial/_version.py"
 
 [tool.pyright]
 typeCheckingMode = "strict"

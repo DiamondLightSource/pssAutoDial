@@ -5,29 +5,16 @@
 
 # pssAutoDial
 
-Module to trigger a phone call when certain alarms are raised
+Module to trigger a phone call when certain alarms are raised. 
 
-This is where you should write a short paragraph that describes what your module does,
-how it does it, and why people should use it.
+Requirement: To place a phone call with an automated message when a gas alarm is raised by the PSS logic solver. This will be used for Flagship beamlines, to notify EHCs of an incident.
+
+The tool makes use of the Twilio API to place the phone call. The message is customisable within the python file. 
+
+Athorisation credentials, and phone numbers are stored separately. To run locally, use an .env file with the format of the .env_template file in the repository.
 
 Source          | <https://github.com/DiamondLightSource/pssAutoDial>
 :---:           | :---:
 PyPI            | `pip install pssAutoDial`
 Docker          | `docker run ghcr.io/diamondlightsource/pssAutoDial:latest`
 Releases        | <https://github.com/DiamondLightSource/pssAutoDial/releases>
-
-This is where you should put some images or code snippets that illustrate
-some relevant examples. If it is a library then you might put some
-introductory code here:
-
-```python
-from pssAutoDial import __version__
-
-print(f"Hello pssAutoDial {__version__}")
-```
-
-Or if it is a commandline tool then you might put some example commands here:
-
-```
-python -m pssAutoDial --version
-```
