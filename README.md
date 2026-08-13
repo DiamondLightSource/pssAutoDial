@@ -1,6 +1,6 @@
 [![CI](https://github.com/DiamondLightSource/pssAutoDial/actions/workflows/ci.yml/badge.svg)](https://github.com/DiamondLightSource/pssAutoDial/actions/workflows/ci.yml)
 [![Coverage](https://codecov.io/gh/DiamondLightSource/pssAutoDial/branch/main/graph/badge.svg)](https://codecov.io/gh/DiamondLightSource/pssAutoDial)
-[![PyPI](https://img.shields.io/pypi/v/pssAutoDial.svg)](https://pypi.org/project/pssAutoDial)
+
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 # pssAutoDial
@@ -16,6 +16,5 @@ Athorisation credentials, and phone numbers are stored separately. To run locall
 What            | Where
 :---:           | :---:
 Source          | <https://github.com/DiamondLightSource/pssAutoDial>
-PyPI            | `pip install pssAutoDial`
 Docker          | `docker run ghcr.io/diamondlightsource/pssAutoDial:latest`
 Releases        | <https://github.com/DiamondLightSource/pssAutoDial/releases>
