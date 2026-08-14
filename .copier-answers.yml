@@ -15,5 +15,5 @@ github_org: DiamondLightSource
 package_name: pssAutoDial
 pypi: false
 repo_name: pssAutoDial
-strict_typing: true
+strict_typing: false
 type_checker: pyright

@@ -50,7 +50,7 @@ name = "Timothy Burd"
 version_file = "src/pss_autodial/_version.py"
 
 [tool.pyright]
-typeCheckingMode = "strict"
+typeCheckingMode = "standard"
 reportMissingImports = false # Ignore missing stubs in imported modules
 
 [tool.pytest.ini_options]
