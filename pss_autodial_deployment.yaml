@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pss-autodial
+spec:
+  selector:
+    matchLabels:
+      app: pss-autodial
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: pss-autodial
+    spec:
+      containers:
+      - name: pss-autodial
+        image: ghcr.io/diamondlightsource/pssautodial:latest
+        resources:
+          limits:
+            cpu: "1"
+            memory: 300M
+        ports:
+        - containerPort: 80
+        env:
+        - name: ACCOUNT_SID
+          valueFrom:
+            secretKeyRef:
+                name: credentials-sealedsecret
+                key: ACCOUNT_SID
+        - name: AUTH_TOKEN
+          valueFrom:
+            secretKeyRef:
+                name: credentials-sealedsecret
+                key: AUTH_TOKEN
+        - name: TWILIO_NUMBER
+          valueFrom:
+            secretKeyRef:
+                name: credentials-sealedsecret
+                key: TWILIO_NUMBER
+        - name: TO_NUMBER
+          valueFrom:
+            secretKeyRef:
+                name: credentials-sealedsecret
+                key: TO_NUMBER
