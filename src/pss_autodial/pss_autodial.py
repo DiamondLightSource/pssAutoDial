@@ -42,6 +42,8 @@ def make_call():
 
 
 async def monitor_alarm():
+    print("Monitoring the alarm")
+
     async def about_once_a_second(value):
         print(f"new value is {value}")
         print(value.__dict__)
@@ -53,5 +55,5 @@ async def monitor_alarm():
 
 
 def run_application():
-    # print("Monitoring!")
+    print("Monitoring!")
     run(monitor_alarm(), forever=True)
