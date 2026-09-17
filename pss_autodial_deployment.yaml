@@ -15,6 +15,7 @@ spec:
       containers:
       - name: pss-autodial
         image: ghcr.io/diamondlightsource/pssautodial:latest
+        command: ["pss_autodial"]
         resources:
           limits:
             cpu: "1"
