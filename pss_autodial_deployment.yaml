@@ -16,7 +16,6 @@ spec:
       - name: pss-autodial
         image: ghcr.io/diamondlightsource/pssautodial:latest
         command: ["pss_autodial"]
-        hostNetwork: true
         resources:
           limits:
             cpu: "1"
@@ -24,6 +23,10 @@ spec:
         ports:
         - containerPort: 80
         env:
+        - name: EPICS_CA_NAME_SERVERS
+          value: 172.23.240.13
+        - name: EPICS_CA_AUTO_ADDR_LIST
+          value: NO
         - name: ACCOUNT_SID
           valueFrom:
             secretKeyRef:
