@@ -1,6 +1,5 @@
 """Interface for ``python -m pss_autodial``."""
 
-import os
 from argparse import ArgumentParser
 from collections.abc import Sequence
 
@@ -24,10 +23,7 @@ def main(args: Sequence[str] | None = None) -> None:
     )
     parser.parse_args(args)
 
-    print(os.environ)
-    print("TESTIBG")
     load_dotenv()  # reads variables from a .env file and sets them in os.environ
-    print(os.environ)
     run_application()
 
 
