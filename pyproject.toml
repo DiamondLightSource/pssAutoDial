@@ -33,7 +33,7 @@ dev = [
     "ruff",
     "tox-uv",
     "types-mock",
-    "urllib3<2.7.1",
+    "urllib3<2.8.1",
 ]
 
 [project.scripts]
